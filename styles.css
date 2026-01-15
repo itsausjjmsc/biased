@@ -24,10 +24,11 @@ header {
 header h1 {
     font-size: 4rem;
     font-weight: bold;
+    color: #667eea; /* Fallback color for browsers that don't support text clipping */
     background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
     margin-bottom: 10px;
     animation: pulse 3s ease-in-out infinite;
 }

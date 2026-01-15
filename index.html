@@ -160,9 +160,22 @@
         <p class="footer-note">This is a parody project. Any resemblance to actual deep insights is purely coincidental and probably wrong.</p>
         <p class="footer-links">
             <a href="https://github.com/itsausjjmsc/biased">GitHub Repo</a> | 
-            <a href="#" onclick="alert('You clicked a link that goes nowhere. This is a metaphor for something. Probably.'); return false;">Meaningless Link</a> |
-            <a href="#" onclick="alert('Still here? The real insight is that you\'re looking for meaning in a parody website. We respect that.'); return false;">Another One</a>
+            <a href="#" id="meaningless-link">Meaningless Link</a> |
+            <a href="#" id="another-link">Another One</a>
         </p>
     </footer>
+
+    <script>
+        // Event listeners for footer links
+        document.getElementById('meaningless-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('You clicked a link that goes nowhere. This is a metaphor for something. Probably.');
+        });
+        
+        document.getElementById('another-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Still here? The real insight is that you\'re looking for meaning in a parody website. We respect that.');
+        });
+    </script>
 </body>
 </html>
