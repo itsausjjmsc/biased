@@ -1,0 +1,73 @@
+{
+  "schema_version": "creation.supergateway-live-observation/1.0",
+  "authority_root": {
+    "id": "creation",
+    "repository": "itsausjjmsc/creation",
+    "source_sha": "559d82fa6a1dcb44426b3d43e1614faf201a8e33"
+  },
+  "projection": {
+    "repository": "itsausjjmsc/biased",
+    "commit_sha": "feb275e70333c35e8607e36dba825014155e091e",
+    "projection_only": true,
+    "canonical_authority_transferred": false
+  },
+  "live_transport": {
+    "renderer": "htmlpreview.github.io",
+    "human_url": "https://htmlpreview.github.io/?https://github.com/itsausjjmsc/biased/blob/feb275e70333c35e8607e36dba825014155e091e/creation-supergateway-human-alpha/index.html",
+    "setup_url": "https://htmlpreview.github.io/?https://github.com/itsausjjmsc/biased/blob/feb275e70333c35e8607e36dba825014155e091e/creation-supergateway-human-alpha/setup/index.html",
+    "canonical_cloudflare_hostname": "gateway.seed-of.life",
+    "canonical_cloudflare_hostname_ready": false
+  },
+  "observations": {
+    "human_dashboard": {
+      "stable_observation_count": 2,
+      "http_status_each": 200,
+      "content_type_each": "text/html; charset=utf-8",
+      "screenshots_captured": 2,
+      "verified_visible_content": [
+        "Creation to SuperGateway living connection",
+        "seven S B U O D V R factors",
+        "mutation held",
+        "leap repair and rejoin failure rule",
+        "human authority boundary"
+      ]
+    },
+    "setup_dashboard": {
+      "stable_observation_count": 2,
+      "http_status_each": 200,
+      "content_type_each": "text/html; charset=utf-8",
+      "screenshots_captured": 2,
+      "verified_visible_content": [
+        "read-only release mode",
+        "seven corrective trinities",
+        "3 + 3 - 1 = 5 proof-pair math",
+        "two stable observations before re-entry",
+        "root escalation without automatic re-entry",
+        "denied mutation and secret capabilities"
+      ]
+    },
+    "health_evidence": {
+      "http_status": 200,
+      "status": "public_human_alpha_online",
+      "authority_root": "creation",
+      "mutation_authority": false,
+      "private_control_readiness_claimed": false,
+      "corrective_routing_online": true,
+      "canonical_cloudflare_hostname_ready": false
+    },
+    "corrective_route_evidence": {
+      "http_status": 200,
+      "factors_in_order": ["S", "B", "U", "O", "D", "V", "R"],
+      "blind_retry": false,
+      "reenter_same_failed_rung": true,
+      "minimum_stable_observations": 2,
+      "root_automatic_reentry": false
+    }
+  },
+  "release_state": "public-read-only-human-alpha-live",
+  "mutation_authority": false,
+  "private_control_plane_live": false,
+  "provider_mutation_live": false,
+  "human_final_acceptance": false,
+  "passed": true
+}
