@@ -1,0 +1,37 @@
+{
+  "schema_version": "creation.supergateway-public-human-alpha/1.0",
+  "release_id": "supergateway-public-human-alpha-2026-08-03",
+  "authority_root": "creation",
+  "gateway_id": "creation-supergateway",
+  "hostname": "gateway.seed-of.life",
+  "status": "public_human_alpha_online",
+  "mode": "public-read-only-human-alpha",
+  "mutation_authority": false,
+  "private_control_plane": {
+    "state": "held-behind-authentication-and-bootstrap-gate",
+    "public_readiness_claimed": false,
+    "mutation_enabled": false
+  },
+  "corrective_routing": {
+    "schema_version": "creation.corrective-trinity-routing/1.0",
+    "route_count": 7,
+    "factors": [
+      "S",
+      "B",
+      "U",
+      "O",
+      "D",
+      "V",
+      "R"
+    ],
+    "blind_retry": false,
+    "reenter_same_failed_rung": true,
+    "minimum_stable_observations": 2
+  },
+  "human_acceptance_inferred": false,
+  "transport": "github_pages_read_only_fallback",
+  "canonical_cloudflare_hostname": "gateway.seed-of.life",
+  "canonical_cloudflare_hostname_ready": false,
+  "human_accessible": true,
+  "human_accepted": false
+}

@@ -1,0 +1,283 @@
+{
+  "schema_version": "creation.corrective-trinity-routing/1.0",
+  "authority_root": "creation",
+  "gateway": "creation-supergateway",
+  "purpose": "Route every failed production rung to the nearest factor-owned corrective trinity, preserve the last valid lineage witness, and re-enter the same failed rung only after bounded repair and stable verification.",
+  "math": {
+    "proof_pair": "3 + 3 - 1 = 5",
+    "corrective_trinity": [
+      "last-valid-lineage-witness",
+      "factor-corrector",
+      "correction-verifier"
+    ],
+    "reentry_trinity": [
+      "correction-verifier",
+      "failed-rung-executor",
+      "new-lineage-witness"
+    ],
+    "shared_node": "correction-verifier",
+    "unique_nodes_across_pair": 5
+  },
+  "global_rules": {
+    "blind_retry": false,
+    "restart_from_root_by_default": false,
+    "skip_failed_rung": false,
+    "reenter_same_failed_rung": true,
+    "minimum_stable_observations": 2,
+    "cooldown_required": true,
+    "maximum_direct_retries": 1,
+    "unknown_failure_requires_human_classification": true,
+    "repeated_failure_escalates_to_root_corrective_trinity": true,
+    "mutation_during_public_human_alpha": false
+  },
+  "routes": [
+    {
+      "factor": "S",
+      "name": "Source reality correction",
+      "owns": [
+        "missing-source",
+        "unreadable-source",
+        "summary-used-as-source",
+        "source-content-mismatch"
+      ],
+      "typical_failed_rungs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "real-source-restorer",
+        "source-evidence-verifier"
+      ],
+      "required_repair_evidence": [
+        "real source bytes",
+        "source identity",
+        "source digest",
+        "source inspection receipt"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "B",
+      "name": "Base identity correction",
+      "owns": [
+        "stale-sha",
+        "tree-mismatch",
+        "dirty-worktree",
+        "wrong-branch",
+        "ancestry-mismatch"
+      ],
+      "typical_failed_rungs": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "base-reconciler",
+        "sha-tree-ancestry-verifier"
+      ],
+      "required_repair_evidence": [
+        "exact commit SHA",
+        "exact tree SHA",
+        "clean-state proof",
+        "ancestry proof"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "U",
+      "name": "Unknown and blocker correction",
+      "owns": [
+        "unknown-state",
+        "unmapped-math",
+        "unresolved-high",
+        "skipped-check",
+        "missing-receipt"
+      ],
+      "typical_failed_rungs": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        13
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "unknown-resolver",
+        "blocker-disposition-verifier"
+      ],
+      "required_repair_evidence": [
+        "explicit unknown inventory",
+        "source-confirmed disposition",
+        "remaining hold list",
+        "no hidden skip"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "O",
+      "name": "Ownership and authority correction",
+      "owns": [
+        "competing-authority",
+        "personal-bypass",
+        "unregistered-executor",
+        "authority-capture",
+        "human-acceptance-inferred"
+      ],
+      "typical_failed_rungs": [
+        0,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "authority-reconciler",
+        "human-and-root-authority-verifier"
+      ],
+      "required_repair_evidence": [
+        "one canonical owner",
+        "registered executor",
+        "human decision boundary",
+        "retired competing path"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "D",
+      "name": "Definition, duplication, and scope correction",
+      "owns": [
+        "scope-drift",
+        "duplicate-unit",
+        "unbounded-operation",
+        "mixed-rung-script",
+        "unexpected-side-effect"
+      ],
+      "typical_failed_rungs": [
+        0,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "scope-and-duplication-reconciler",
+        "bounded-operation-verifier"
+      ],
+      "required_repair_evidence": [
+        "bounded intent",
+        "unit conservation map",
+        "single-rung responsibility",
+        "side-effect boundary"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "V",
+      "name": "Validation and behavior correction",
+      "owns": [
+        "test-failure",
+        "review-failure",
+        "preview-parity-failure",
+        "runtime-failure",
+        "external-observation-failure"
+      ],
+      "typical_failed_rungs": [
+        4,
+        6,
+        7,
+        11,
+        12,
+        13
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "behavior-repairer",
+        "independent-validation-verifier"
+      ],
+      "required_repair_evidence": [
+        "failing test reproduction",
+        "bounded repair",
+        "independent verification",
+        "two stable observations"
+      ],
+      "reentry": "failed rung"
+    },
+    {
+      "factor": "R",
+      "name": "Receipt, recovery, and return correction",
+      "owns": [
+        "receipt-mismatch",
+        "permit-replay",
+        "missing-rollback",
+        "failed-return",
+        "recovery-unavailable",
+        "lineage-break"
+      ],
+      "typical_failed_rungs": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "corrective_trinity": [
+        "last-valid-lineage-witness",
+        "receipt-and-recovery-restorer",
+        "return-lineage-verifier"
+      ],
+      "required_repair_evidence": [
+        "receipt hash chain",
+        "single-use state",
+        "tested rollback",
+        "return-to-Creation proof"
+      ],
+      "reentry": "failed rung"
+    }
+  ],
+  "root_corrective_trinity": {
+    "trigger": [
+      "unclassified failure",
+      "second failure after direct corrective attempt",
+      "cross-factor contradiction",
+      "possible human harm"
+    ],
+    "roles": [
+      "last-valid-lineage-witness",
+      "creation-mesh-globe",
+      "human-authority"
+    ],
+    "actions": [
+      "freeze mutation",
+      "expose complete evidence",
+      "select owning factor",
+      "authorize bounded correction or withdrawal"
+    ],
+    "automatic_reentry": false
+  }
+}

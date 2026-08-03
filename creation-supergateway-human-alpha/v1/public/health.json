@@ -1,0 +1,11 @@
+{
+  "schema_version": "creation.supergateway-public-health/1.1",
+  "status": "public_human_alpha_online",
+  "authority_root": "creation",
+  "gateway_id": "creation-supergateway",
+  "layer": "github_pages_read_only_fallback",
+  "mutation_authority": false,
+  "private_control_readiness_claimed": false,
+  "corrective_routing_online": true,
+  "canonical_cloudflare_hostname_ready": false
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "creation.supergateway-layer-boundary/1.1",
+  "authority_root": "creation",
+  "gateway_id": "creation-supergateway",
+  "release_id": "supergateway-public-human-alpha-2026-08-03",
+  "layers": [
+    {
+      "id": "public_human_alpha_pages_fallback",
+      "reachable": true,
+      "mutation": false,
+      "exposes": [
+        "human dashboard",
+        "setup dashboard",
+        "public health",
+        "layer boundary",
+        "seven-factor explanation",
+        "corrective-trinity routes",
+        "architecture status"
+      ]
+    },
+    {
+      "id": "canonical_cloudflare_worker",
+      "reachable": false,
+      "state": "held-at-provider-credential-and-dns-correction",
+      "mutation": false
+    },
+    {
+      "id": "private_control",
+      "reachable": false,
+      "readiness_claimed_by_public_endpoint": false,
+      "mutation": false,
+      "exposes_publicly": false
+    }
+  ],
+  "denied_from_public_layer": [
+    "source mutation",
+    "GitHub write",
+    "provider mutation",
+    "secret use",
+    "deployment initiation",
+    "permit issue",
+    "permit consumption",
+    "human acceptance inference"
+  ]
+}
