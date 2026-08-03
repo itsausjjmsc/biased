@@ -1,0 +1,33 @@
+{
+  "schema_version": "creation.public-projection/1.0",
+  "projection_id": "creation-supergateway-human-alpha",
+  "authority_root": {
+    "id": "creation",
+    "repository": "itsausjjmsc/creation",
+    "source_sha": "559d82fa6a1dcb44426b3d43e1614faf201a8e33"
+  },
+  "projection_repository": "itsausjjmsc/biased",
+  "projection_only": true,
+  "canonical_authority_transferred": false,
+  "mode": "public-read-only-human-alpha",
+  "mutation_authority": false,
+  "private_data": false,
+  "cloudflare_canonical_hostname": "gateway.seed-of.life",
+  "cloudflare_canonical_hostname_ready": false,
+  "artifact": {
+    "github_artifact_id": 8849971435,
+    "github_artifact_name": "supergateway-human-alpha-static",
+    "github_artifact_digest": "sha256:184af65c1b4d395f43a8f3bb06423afecb50dbc557f99f44e617f7bd678fce63",
+    "workflow_run_id": 30798810419
+  },
+  "files": {
+    "index.html": "79691801373fb39e4d1d7f99a1663bb258a857ef05215abe760b2da5536cd2b8",
+    "404.html": "79691801373fb39e4d1d7f99a1663bb258a857ef05215abe760b2da5536cd2b8",
+    "setup/index.html": "12dbf8041f8d3c218cce62d5dcbcdb2e596bd918adaff7a7d76e2f3b22e977f0",
+    "v1/public/correction-routes.json": "5861fb8db991c551be13e917b11e59b14dc48f070f3122358fac894f3760a3fa",
+    "v1/public/health.json": "2244a09513419a66d75284876d43a0648922008347dba09bc8466c5cbbabc2cd",
+    "v1/public/layers.json": "035dba173a5108d95d029a8acc64cd7b1fecb91e8c4aa861b03e9eaaa3ec4d41",
+    "v1/public/status.json": "28ee69453bca800ea161e5de8e97f14cecba5e5bdffe8ee86a3ba5c015e5c819"
+  },
+  "human_accepted": false
+}
